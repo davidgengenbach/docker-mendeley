@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 
-set -e
-
 docker build -t mendeley .
 
 XSOCK=/tmp/.X11-unix
 XAUTH=/tmp/.docker.xauth
 
-xauth nlist :0 | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
+MENDELEY_DATA_DIR=".local/share/data/Mendeley Ltd./Mendeley Desktop/"
 
 docker \
   run \
   -ti \
   -v $XSOCK:$XSOCK \
   -v $XAUTH:$XAUTH \
+  -v $(pwd)/pdfs:/Documents \
+  -v "$(pwd)/.config":/root/.config \
+  -v "$(pwd)/${MENDELEY_DATA_DIR}":"/root/${MENDELEY_DATA_DIR}" \
   -e XAUTHORITY=$XAUTH \
   -e DISPLAY=$DISPLAY \
   mendeley

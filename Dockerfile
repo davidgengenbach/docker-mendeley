@@ -1,4 +1,4 @@
-FROM debian
+FROM ubuntu:18.04
 
 ARG VERSION=1.19.4
 ARG FILENAME=mendeleydesktop_${VERSION}-stable_amd64.deb
@@ -26,6 +26,9 @@ RUN apt-get -qqy install -f
 
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN mkdir -p /usr/share/X11/xkb
+ENV QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
 
 ENV DISPLAY :0
 CMD mendeleydesktop
