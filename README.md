@@ -34,4 +34,10 @@ Also, a VNC client is needed and needs to be manually connected.
 
 ### Mendeley Online
 
-Nice alternative - (but) online 
+Nice alternative - (but) online
+
+Does not have auto-sync of folders + I do not want to upload PDFs to Mendeley since they may be... 
+
+## License
+
+I am not entirely sure what license is applicable when using Mendeley Desktop. If you know, please let me know through an issue or pull request!
