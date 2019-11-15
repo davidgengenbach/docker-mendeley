@@ -12,7 +12,7 @@ docker \
   -ti \
   -v $XSOCK:$XSOCK \
   -v $XAUTH:$XAUTH \
-  -v $(pwd)/pdfs:/Documents \
+  -v $(pwd)/pdfs:/pdfs \
   -v "$(pwd)/.config":/root/.config \
   -v "$(pwd)/${MENDELEY_DATA_DIR}":"/root/${MENDELEY_DATA_DIR}" \
   -e XAUTHORITY=$XAUTH \

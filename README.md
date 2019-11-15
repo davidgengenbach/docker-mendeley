@@ -16,9 +16,9 @@ Then this is for you!
   - delete the `.config` and `.local` folders when you want to prevent this
 - Automatically mounts the `pdfs` folder
   - Has to be configured (once) in the Mendeley options
-  - `pdfs/watched`
+  - `/pdfs/watched`
     - put your PDFs in here and configure the watcher
-  - `pdfs/organized`
+  - `/pdfs/organized`
     - configure your Mendeley to organize your PDFs in here 
 
 
