@@ -9,4 +9,11 @@ XAUTH=/tmp/.docker.xauth
 
 xauth nlist :0 | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
 
-docker run -ti -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH mendeley
+docker \
+  run \
+  -ti \
+  -v $XSOCK:$XSOCK \
+  -v $XAUTH:$XAUTH \
+  -e XAUTHORITY=$XAUTH \
+  -e DISPLAY=$DISPLAY \
+  mendeley

@@ -3,10 +3,9 @@ FROM debian
 ARG VERSION=1.19.4
 ARG FILENAME=mendeleydesktop_${VERSION}-stable_amd64.deb
 
-ADD https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/${FILENAME} .
-
 RUN apt-get update && \
   apt-get install -qqy \
+    wget \
     x11-apps \
     python \
     gconf2 \
@@ -19,6 +18,8 @@ RUN apt-get update && \
     libxtst6 \
     libxrandr2 \
     libasound2
+
+RUN wget https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop/${FILENAME}
 
 RUN dpkg -i ${FILENAME}
 RUN apt-get -qqy install -f
