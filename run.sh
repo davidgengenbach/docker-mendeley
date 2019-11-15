@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-docker build -t mendeley .
-
 XSOCK=/tmp/.X11-unix
 XAUTH=/tmp/.docker.xauth
 

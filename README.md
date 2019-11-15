@@ -7,6 +7,9 @@ You do not want to install Mendeley on your host-system because you are:
 Then this is for you!
 
 ```shell
+# Once
+./build.sh
+
 ./run.sh
 ```
 
