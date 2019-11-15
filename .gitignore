@@ -1,3 +1,5 @@
 *.pdf
+*.bib
+*.zip
 .local/
 .config/

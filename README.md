@@ -45,6 +45,10 @@ Nice alternative - (but) online
 
 Does not have auto-sync of folders + I do not want to upload PDFs to Mendeley since they may be... 
 
+### Zotero
+
+Might be a better candidate since the developers are financially independent (Mendeley is by Elsivier...).
+
 ## License
 
 I am not entirely sure what license is applicable when using Mendeley Desktop. If you know, please let me know through an issue or pull request!
