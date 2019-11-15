@@ -15,4 +15,4 @@ docker \
   -v "$(pwd)/${MENDELEY_DATA_DIR}":"/root/${MENDELEY_DATA_DIR}" \
   -e XAUTHORITY=$XAUTH \
   -e DISPLAY=$DISPLAY \
-  mendeley
+  davidgengenbach/mendeley-desktop:latest

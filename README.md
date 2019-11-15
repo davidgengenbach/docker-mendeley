@@ -1,13 +1,20 @@
 # Docker: Mendeley
 
+[![DockerHub](https://img.shields.io/badge/DockerHub-success?style=for-the-badge&logo=docker)](https://hub.docker.com/r/davidgengenbach/mendeley-desktop)
+
 You do not want to install Mendeley on your host-system because you are:
 - paranoid
 - do not want to clutter your system?
 
 Then this is for you!
 
+:warning: **Important: If you want to have persistent configuration, please clone the Github repo as described below!** :warning:
+
 ```shell
-# Once
+git clone --depth 1 https://github.com/davidgengenbach/docker-mendeley.git
+cd docker-mendeley
+
+# (Only needed if you want to build the image yourself) Execute once
 ./build.sh
 
 ./run.sh
