@@ -49,6 +49,8 @@ Does not have auto-sync of folders + I do not want to upload PDFs to Mendeley si
 
 Might be a better candidate since the developers are financially independent (Mendeley is by Elsivier...).
 
+Unfortunately it does not have the same functionality of Mendeley.
+
 ## License
 
 I am not entirely sure what license is applicable when using Mendeley Desktop. If you know, please let me know through an issue or pull request!
