@@ -7,6 +7,7 @@ MENDELEY_DATA_DIR=".local/share/data/Mendeley Ltd./Mendeley Desktop/"
 
 xhost +local:docker
 
+
 docker \
   run \
   -v $XSOCK:$XSOCK \
@@ -16,6 +17,7 @@ docker \
   -v "$(pwd)/${MENDELEY_DATA_DIR}":"/root/${MENDELEY_DATA_DIR}" \
   -e XAUTHORITY=$XAUTH \
   -e DISPLAY=$DISPLAY \
+  --security-opt label=type:container_runtime_t \
   davidgengenbach/mendeley-desktop:latest
 
 xhost -local:docker
